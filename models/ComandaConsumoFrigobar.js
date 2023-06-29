@@ -14,7 +14,7 @@ const ComandaConsumoFrigobarSchema = Schema({
     required: true,
   },
   fechaActual: {
-    type: String,
+    type: Date,
   },
   camarera: {
     type: String,

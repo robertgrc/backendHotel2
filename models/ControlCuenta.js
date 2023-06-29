@@ -14,7 +14,7 @@ const ControlCuentaSchema = Schema({
     required: true
   },
   fechaActual: {
-    type: String,
+    type: Date,
     required: true
   },
   detalleAbono: {

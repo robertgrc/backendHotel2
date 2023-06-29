@@ -14,7 +14,7 @@ const ComandaRestauranteSchema = Schema({
     required: true,
   },
   fechaActual: {
-    type: String,
+    type: Date,
   },
   mesero: {
     type: String,

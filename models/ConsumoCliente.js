@@ -14,7 +14,7 @@ const ConsumoClienteSchema = Schema({
     required: true,
   },
   fechaActual: {
-    type: String,
+    type: Date,
   },
   recepcionista: {
     type: String,
