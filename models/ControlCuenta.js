@@ -15,26 +15,15 @@ const ControlCuentaSchema = Schema({
   },
   fechaActual: {
     type: Date,
-    required: true
+   // required: true
   },
   detalleAbono: {
     type: String,
     required: true
   },
-  saldo: {
-    type: Number,
-    required: true
-  },
-  credito: {
-    type: Number,
-    required: true
-  },
   abono: {
     type: Number,
     required: true,
-  },
-  observaciones:{
-    type: String,
   },
 });
 
