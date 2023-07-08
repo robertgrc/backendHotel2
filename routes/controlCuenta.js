@@ -14,6 +14,7 @@ const {
   updateControlCuenta,
   deleteControlCuenta,
 } = require("../controllers/controlCuenta");
+const { validarJWT } = require("../middlewares/validar-jwt");
 
 const router = Router();
 
@@ -24,7 +25,9 @@ router.get("/", getControlCuenta);
 router.get("/:id", getControlCuentaById);
 
 //Crear un ControlCuenta
-router.post("/", createControlCuenta);
+router.post("/",[
+  validarJWT
+], createControlCuenta);
 
 //Actualizar un ControlCuenta
 router.put("/:id", updateControlCuenta);

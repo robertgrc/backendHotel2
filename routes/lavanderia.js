@@ -14,6 +14,7 @@ const {
   updateLavanderia,
   deleteLavanderia,
 } = require("../controllers/lavanderia");
+const { validarJWT } = require("../middlewares/validar-jwt");
 
 const router = Router();
 
@@ -24,7 +25,9 @@ router.get("/", getLavanderia);
 router.get("/:id", getLavanderiaById);
 
 //Crear un registro de Lavanderia
-router.post("/", createLavanderia);
+router.post("/",[
+  validarJWT
+], createLavanderia);
 
 //Actualizar un registro de Lavanderia
 router.put("/:id", updateLavanderia);
